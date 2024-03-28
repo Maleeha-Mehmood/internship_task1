@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Attendance Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Admin Attendance Management</h2>
+        <div class="mt-4">
+            <button onclick="addStudent()" class="btn btn-success">Add Student</button>
+            <button onclick="editStudent()" class="btn btn-primary">Edit Student</button>
+            <button onclick="deleteStudent()" class="btn btn-danger">Delete Student</button>
+            <hr>
+            <h4>Create Attendance Report</h4>
+            <form onsubmit="createReport(); return false;">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="date" class="form-control" placeholder="From Date" id="fromDate">
+                    </div>
+                    <div class="col">
+                        <input type="date" class="form-control" placeholder="To Date" id="toDate">
+                    </div>
+                    <button type="submit" class="btn btn-info">Create Report</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function addStudent() {
+            // Placeholder for add student functionality
+            alert('Add student functionality clicked.');
+        }
+
+        function editStudent() {
+            // Placeholder for edit student functionality
+            alert('Edit student functionality clicked.');
+        }
+
+        function deleteStudent() {
+            // Placeholder for delete student functionality
+            alert('Delete student functionality clicked.');
+        }
+
+        function createReport() {
+            // Placeholder for creating report functionality
+            alert('Report creation functionality clicked.');
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

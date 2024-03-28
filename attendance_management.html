@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Attendance Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        function addAttendance() {
+            alert('Add attendance functionality triggered.');
+            // Implement the functionality here.
+        }
+
+        function editAttendance() {
+            alert('Edit attendance functionality triggered.');
+            // Implement the functionality here.
+        }
+
+        function deleteAttendance() {
+            alert('Delete attendance functionality triggered.');
+            // Implement the functionality here.
+        }
+
+        function createReport() {
+            alert('Create report functionality triggered.');
+            // Implement the functionality here.
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Admin Attendance Management</h2>
+        
+        <div class="my-4">
+            <h4>Manage Attendance</h4>
+            <button onclick="addAttendance()" class="btn btn-success">Add Attendance</button>
+            <button onclick="editAttendance()" class="btn btn-primary">Edit Attendance</button>
+            <button onclick="deleteAttendance()" class="btn btn-danger">Delete Attendance</button>
+        </div>
+
+        <div class="my-4">
+            <h4>Create Attendance Report</h4>
+            <form>
+                <div class="form-group">
+                    <label for="from-date">From:</label>
+                    <input type="date" class="form-control" id="from-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="to-date">To:</label>
+                    <input type="date" class="form-control" id="to-date" required>
+                </div>
+                <button type="button" onclick="createReport()" class="btn btn-info">Create Report</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

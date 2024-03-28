@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for alert messages */
+        .custom-alert {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 300px;
+            z-index: 9999;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .custom-alert-success {
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+            color: #3c763d;
+        }
+
+        .custom-alert-warning {
+            background-color: #fcf8e3;
+            border-color: #faebcc;
+            color: #8a6d3b;
+        }
+
+        .custom-alert-info {
+            background-color: #d9edf7;
+            border-color: #bce8f1;
+            color: #31708f;
+        }
+
+        .custom-alert-danger {
+            background-color: #f2dede;
+            border-color: #ebccd1;
+            color: #a94442;
+        }
+    </style>
+    <script>
+        function editProfilePicture() {
+            // Placeholder function for editing profile picture
+            showAlert('Profile picture edit option clicked.', 'success');
+            // In a real application, this could open a modal for uploading a new profile picture
+        }
+
+        function markAttendance() {
+            showAlert('Attendance marked successfully.', 'success');
+            // You can add further functionality here, such as sending a request to mark attendance in the backend
+        }
+
+        function markLeave() {
+            showAlert('Leave marked successfully.', 'warning');
+            // You can add further functionality here, such as sending a request to mark leave in the backend
+        }
+
+        function viewAttendance() {
+            showAlert('View attendance clicked.', 'info');
+            // You can add further functionality here, such as opening a modal to display attendance details
+        }
+
+        function showAlert(message, type) {
+            var alertClass = '';
+            switch (type) {
+                case 'success':
+                    alertClass = 'custom-alert custom-alert-success';
+                    break;
+                case 'warning':
+                    alertClass = 'custom-alert custom-alert-warning';
+                    break;
+                case 'info':
+                    alertClass = 'custom-alert custom-alert-info';
+                    break;
+                case 'danger':
+                    alertClass = 'custom-alert custom-alert-danger';
+                    break;
+                default:
+                    alertClass = 'custom-alert';
+                    break;
+            }
+
+            var alertBox = '<div class="' + alertClass + '">' + message + '</div>';
+            document.body.insertAdjacentHTML('beforeend', alertBox);
+
+            // Remove the alert after 3 seconds
+            setTimeout(function() {
+                document.querySelector('.' + alertClass.replace(' ', '.')).remove();
+            }, 3000);
+        }
+
+        function uploadProfilePicture(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#profile-picture-preview').attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Student Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            </ul>
+            <ul class="navbar-nav ml-auto"> <!-- This class aligns the profile to the right -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink"> <!-- Optional: dropdown-menu-right aligns the dropdown to the right -->
+                        <a class="dropdown-item" href="#" onclick="document.getElementById('profile-picture-input').click(); return false;">Edit Profile Picture</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <input type="file" id="profile-picture-input" style="display: none;" onchange="uploadProfilePicture(this)" accept="image/*">
+    
+    <div class="container">
+        <h2 class="mt-5">Student Attendance Actions</h2>
+        <div class="mt-4">
+            <button onclick="markAttendance()" class="btn btn-success">Mark Attendance</button>
+            <button onclick="markLeave()" class="btn btn-warning">Mark Leave</button>
+            <button onclick="viewAttendance()" class="btn btn-primary">View Attendance</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

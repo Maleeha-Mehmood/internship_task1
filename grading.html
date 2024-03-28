@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Leave and Grading Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Leave and Grading Management</h2>
+        <div class="mt-4">
+            <button onclick="approveLeave()" class="btn btn-success">Approve Leave</button>
+            <button onclick="denyLeave()" class="btn btn-danger">Deny Leave</button>
+            <hr>
+            <h4>Create System-wide Attendance Report</h4>
+            <form onsubmit="createSystemReport(); return false;">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="date" class="form-control" id="systemFromDate">
+                    </div>
+                    <div class="col">
+                        <input type="date" class="form-control" id="systemToDate">
+                    </div>
+                    <button type="submit" class="btn btn-info">Create Report</button>
+                </div>
+            </form>
+            <hr>
+            <h4>Update Grading System</h4>
+            <button onclick="updateGrading()" class="btn btn-primary">Update Grading System</button>
+        </div>
+    </div>
+
+    <script>
+        function approveLeave() {
+            // Placeholder for approve leave functionality
+            alert('Approve leave functionality clicked.');
+        }
+
+        function denyLeave() {
+            // Placeholder for deny leave functionality
+            alert('Deny leave functionality clicked.');
+        }
+
+        function createSystemReport() {
+            // Placeholder for creating system-wide report functionality
+            alert('System-wide report creation functionality clicked.');
+        }
+
+        function updateGrading() {
+            // Placeholder for updating grading system
+            alert('Update grading system functionality clicked.');
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

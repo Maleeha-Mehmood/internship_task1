@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Account Access</h2>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#register">Register</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="login" class="container tab-pane active">
+                <h3>Login Form</h3>
+                <form action="attendance.html">
+                    <div class="form-group">
+                        <label for="login-email">Email:</label>
+                        <input type="email" class="form-control" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password:</label>
+                        <input type="password" class="form-control" id="login-password" required>
+                    </div>
+                   <button type="submit" class="btn btn-primary">Login</button>
+                   <p>Do not have an account? <a href="#register" data-toggle="tab">Register here</a></p>
+
+                </form>
+            </div>
+            <div id="register" class="container tab-pane fade">
+                <h3>Registration Form</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="register-name">Name:</label>
+                        <input type="text" class="form-control" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email:</label>
+                        <input type="email" class="form-control" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password:</label>
+                        <input type="password" class="form-control" id="register-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Register</button>
+                    <p>Already have an account? <a href="#login" data-toggle="tab">Login here</a></p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
